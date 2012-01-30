@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>JSOO - Galgje</title>
+	<meta name="description" content="JSOO - Galgje" />
+	<meta name="author" content="David van de Vondervoort" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="jquery-1.7.min.js"></script>
+	
+	<script type="text/javascript" src="Player.js"></script>
+	<script type="text/javascript" src="Word.js"></script>
+	<script type="text/javascript" src="Drawer.js"></script>
+	<script type="text/javascript" src="Galgje.js"></script>
+
+	<script type="text/javascript">
+	
+	function showGameStatus(){
+		$('#player h2').html( player.getPlayerName() );
+		$('#player p').first().html( 'Gewonnen: '+player.getWon());
+		$('#player p').last().html( 'Verloren: '+player.getLost());
+		$('#displayWord p').html( game.getDisplayWord() );
+	}
+	
+	$(document).ready(function(){
+		
+		var player = new Player('David');
+		var game = new Galgje();
+		game.begin();
+		
+		$('#player h2').html( player.getPlayerName() );
+		$('#player p').first().html( 'Gewonnen: '+player.getWon());
+		$('#player p').last().html( 'Verloren: '+player.getLost());
+		$('#displayWord p').html( game.getDisplayWord() );
+		
+		$('button').live('click', function(){
+			$(this).attr('disabled', true);
+			var isLetterInWord = false;
+			for(var i = 0; i < game.getWord().length; i++ ){
+				if ($(this).text() == game.getWord().charAt(i)){
+					game.setCorrectCounter(1);
+					game.setLetterInDisplayWord(i, $(this).text());
+					isLetterInWord = true;
+				}
+			}
+			if(!isLetterInWord) {
+				game.setGalgStatus((-1));
+				game.galgPart();
+			}
+			$('#displayWord p').html( game.getDisplayWord() );
+
+			if(game.isWon()) {
+				alert('Je hebt het woord geraden!');
+
+				game.begin();
+				player.hasWon();
+				game.getDrawer().blankCanvas();
+				$('#player h2').html( player.getPlayerName() );
+				$('#player p').first().html( 'Gewonnen: '+player.getWon());
+				$('#player p').last().html( 'Verloren: '+player.getLost());
+				$('#displayWord p').html( game.getDisplayWord() );
+				
+			}
+			else if(game.isLost()) {
+				alert('Je hangt!');
+				
+				game.begin();
+				player.hasLost();
+				game.getDrawer().blankCanvas();
+				$('#player h2').html( player.getPlayerName() );
+				$('#player p').first().html( 'Gewonnen: '+player.getWon());
+				$('#player p').last().html( 'Verloren: '+player.getLost());
+				$('#displayWord p').html( game.getDisplayWord() );
+			}
+		});
+		
+	});
+	</script>
+
+</head>
+
+<body>
+	
+	<div id="game">
+		
+		<h1>JSOO - Galgje</h1>
+		
+		<div id="player">
+			<h2></h2>
+			<p></p>
+			<p></p>
+		</div>
+		
+		<div id="right">
+			<div id="displayWord"><p></p></div>		
+			<div id="letters"></div>
+		</div>
+		
+		<canvas id="galg" width="500" height="400"></canvas>
+		
+	</div>
+
+</body>
+</html>

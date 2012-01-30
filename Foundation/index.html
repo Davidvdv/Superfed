@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Superfed: frontend development bij opleiding Mediatechnologie Hogeschool Rotterdam</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css' />
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<!-- Twitter widget -->
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container" id="top">
+
+		<div class="row" id="header">
+			<div class="twelve columns">
+				<h1>Superfed</h1>
+				<hr />
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="nine columns">
+				<dl class="tabs">
+					<dd><a href="#simple1" class="active">Hoi!</a></dd>
+					<dd><a href="#simple2">Wat kan ik doen?</a></dd>
+					<dd><a href="#simple3">Wat heb ik eraan?</a></dd>
+					<dd><a href="#simple4">Thema</a></dd>
+				</dl>
+
+				<ul class="tabs-content">
+					<li class="active" id="simple1Tab">Hoi. Superfed is een initiatief om cocreatief inhoud van colleges te bepalen rondom frontend development.
+
+		Cocreatief houdt in dat we samen met jou graag de inhoud willen bepalen.
+
+		We hopen dat je graag mee wilt doen!</li>
+					<li id="simple2Tab">
+						<ol>
+
+				          <li>Volg @_superfed op twitter</li>
+				          <li>Post links naar bronnen via @_superfed</li>
+				          <li>Post links naar voorbeelden via @_superfed</li>
+				          <li>Post links naar onderwerpen via @_superfed</li>
+				          <li>Stel vragen met #qsuperfed via @_superfed</li>
+
+		        		</ol>
+		        	</li>
+					<li id="simple3Tab">
+						<ul>
+
+				          <li>Kudo's voor het delen van kennis met anderen</li>
+				          <li>Up-to-date kennis over frontend development van collega's'</li>
+				          <li>Links naar online college materiaal</li>
+
+		        		</ul>
+		        	</li>
+		        	<li id="simple4Tab">De volgende thema's hebben we al gekozen. De thema's kunnen uiteraard uitgebreid of aangevuld worden. Daarbij hebben we ook een minimale invulling voor de thema's al gegeven. Concrete links naar bronnen staan ook al op twitter via _superfed</li>
+				</ul>
+
+				<div class="row">
+					<div class="twelve rows">
+						<script>
+			                new TWTR.Widget({
+			                  version: 2,
+			                  type: 'search',
+			                  search: '@_superfed OR #jsframe OR #jsoop OR #respweb OR #qsuperfed',
+			                  interval: 30000,
+			                  title: 'Front-end developement via',
+			                  subject: '@_Superfed',
+			                  width: 'auto',
+			                  height: 300,
+			                  theme: {
+			                    shell: {
+			                      background: '#eee5e0',
+			                      color: '#000000'
+			                    },
+			                    tweets: {
+			                      background: '#eee5e0',
+			                      color: '#000000',
+			                      links: '#ff4800'
+			                    }
+			                  },
+			                  features: {
+			                    scrollbar: false,
+			                    loop: false,
+			                    live: false,
+			                    behavior: 'all'
+			                  }
+			                }).render().start();
+			              </script>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="three columns">
+						<div class="panel">
+							<h4>HTML5 en CSS3</h4>
+							<p><strong>De basis voor nieuwe ontwikkelingen binnen het domein van frontend development.</strong></p> 
+					<p><strong>Mogelijke Onderwerpen:</strong> html5 structuur elementen, canvas, localstorage, css3 transition, mediaqueries.</p>
+					<p><strong>Twitter hashtag</strong>: #htmlcss<p>
+					</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<div class="panel">
+							<h4>Responsive webdesign</h4>
+							<p><strong>Responsive webdesign, ontwikkelen voor meerdere devices</strong></p>
+					<p><strong>Onderwerpen:</strong> mediaqueries, flexible images, flexible lay-out.</p>
+					<p><strong>Twitter hashtag:</strong> #respweb</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<div class="panel">
+							<h4>JavaScript OO</h4>
+					<p><strong>Ontketen de kracht van JavaScript.</strong></p>
+					<p><strong>Onderwerpen:</strong> object oriented, closures, scope van variabelen, prototype.</p>
+					<p><strong>Twitter hashtag:</strong> #jsoop</p>
+						</div>
+					</div>
+					<div class="three columns">
+						<div class="panel">
+							<h4>JavaScript Frameworks en Libraries</h4>
+					<p><strong>Gebruik frameworks en libraries voor het professioneel ontwikkelen van websites</strong></p>
+					<p><strong>Mogelijke onderwerpen:</strong> modernizr, sencha, cappuccino, sproutcore.</p>
+					<p><strong>Twitter hashtag:</strong> #jsframe</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="three columns">			
+				<h4>Spelregels voor participatie</h4>
+				<ul>
+					<li>We gebruiken <strong>twitter</strong> voor communicatie.</li>
+					<li>Gebruik <strong>@_superfed</strong></li>
+
+					<li>Gebruik <strong>#htmlcss, #respweb, #jsoop, #jsframe</strong> om aan te geven waar je tweet overgaat.</li>
+					<li>Gebruik <strong>#qsuperfed</strong> icm met een thema om een vraag te stellen</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- container -->
+
+
+
+
+	<!-- Included JS Files -->
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>
+
+</body>
+</html>

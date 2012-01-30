@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Html5 Superfed</title>
+	<meta name="description" content="Html5 Superfed" />
+	<meta name="author" content="David van de Vondervoort" />
+	
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="local-storage.js"></script>
+</head>
+
+<body>
+	<div id="site">
+		
+		<header>
+			<h1>HTML5 features</h1>
+		</header>
+		
+		<section>
+			
+			<summary>Op deze pagina zijn een aantal HTML5 features te vinden die ik heb uitgezocht. Ik ben mij ervan bewust dat de ondersteuning van die verschillende features kunnen varieren bij verschillende moderne browsers. Chrome lijkt op dit moment de koploper, met name op het gebied van semantisch tags, zoals: &lt;summery&gt; en &lt;details&gt; bijvoorbeeld. Je moet zoiets als &lt;div class=&quot;details&quot;&gt; zo min mogelijk willen, maar juist de tags gebruiken die zeggen welke content het bevat. Net als XML dus. Wat betreft CSS3 wil ik niet gebruiken als gimmicks, maar als waardige toevoeging op de pagina.</summary>
+			
+			<article class="float">
+				<h2>HTMl5 video tag</h2>
+				<video width="320" height="240" controls="controls">
+				  	<source src="media/uitleg-zorgstelsel.mp4" type="video/mp4" />
+					<source src="http://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.webm" type="video/webm" />
+				  	Y U NO play video?
+				</video>
+			</article>
+			
+			<article class="float">
+				<h2>HTML5 audio tag</h2>
+				<audio controls="controls">
+				  <source src="media/Moby-TheBrokenPlaces.mp3" type="audio/mp3" />
+				  Y U NO play audio?
+				</audio>
+			</article>
+			
+			<div class="clearfix"></div>
+			
+			<article class="float">
+				<h2>Local storage</h2>
+				
+				<form method="post" action="" id="form1">
+					<fieldset>
+						<legend>Local storage</legend>
+						<label for="input">Text</label><textarea id="input" placeholder="Type some text.." required></textarea>
+							<input type="submit" id="saveBtn" name="save" value="Go with the flow" />
+							<a href="index.html">Refresh to see localstorage</a>
+					</fieldset>
+				</form>
+				
+				<p class="local-storage"></p>
+			</article>
+			
+			<article class="float">
+				<h2>Local storage with JSON</h2>
+				
+				<form method="post" action="" id="form2">
+					<fieldset>
+						<legend>Local storage JSON</legend>
+						<label for="title">Title</label><input type="type" name="title" id="title" />
+						<label for="textarea">Text</label><textarea id="textarea" placeholder="Type some text.." required></textarea>
+							<input type="submit" id="jsonBtn" name="jsonSave" value="Go with the flow" />
+							<a href="index.html">Refresh to see localstorage</a>
+					</fieldset>
+				</form>
+				
+				<p class="local-storage-json"></p>
+			</article>
+			
+			<div class="clearfix"></div>
+
+			<article class="float transition-fix">
+				<h2>Image transition</h2>
+				<div id="img-transition">
+					<img src="media/html5-css3.jpg" />
+					<div class="details">Hier kan nu een beschrijving staan voor de afbeelding.</div>
+				</div>
+			</article>
+
+			<div class="clearfix"></div>
+
+		</section>
+		
+		<footer><p><a href="https://twitter.com/#!/_superfed">@_superfed</a> - <a href="https://github.com/Davidvdv/Superfed">https://github.com/Davidvdv/Superfed</p></footer>
+	</div>
+</body>
+</html>

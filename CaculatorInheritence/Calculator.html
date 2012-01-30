@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+
+	<title>JSOO - Calculator</title>
+	<meta name="description" content="JSOO - Calculator" />
+	<meta name="author" content="David van de Vondervoort" />
+	
+	<script type="text/javascript" src="Calculator.js"></script>
+	<script type="text/javascript" src="AdvancedCal.js"></script>
+
+	<script type="text/javascript">
+	
+	/** Instantie van class Calculator **/
+	var cal = new Calculator();
+	
+	cal.multiply(2, 100);
+	//alert(Calculator.prototype.result);
+	alert(cal.getResult());
+	
+	cal.plus(2, 100);
+	alert(cal.getResult());
+	
+	cal.devide(2, 100);
+	alert(cal.getResult());
+	
+	cal.substract(2, 100);
+	alert(cal.getResult());
+
+	/** Instantie van class Calculator **/
+	var advCal = new AdvancedCal(); 
+	
+	advCal.ceil(98.4);
+	alert(advCal.getResult());
+	
+	/** Functionaliteit uit parent class testen **/
+	advCal.plus(5,3);
+	alert(advCal.getResult());
+	</script>
+
+</head>
+
+<body>
+
+</body>
+</html>

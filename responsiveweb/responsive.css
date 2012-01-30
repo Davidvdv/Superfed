@@ -1,0 +1,17 @@
+@media screen and (max-width:960px){
+	
+	.sidebar { display: none; }
+	.content { margin-left: 0px;}
+	.container-fluid > .content { margin-left: 0px; }
+	.hero-unit { padding: 1%; }
+
+}
+
+@media screen and (max-width:320px){
+	
+	.sidebar { display: none; }
+	.content { margin-left: 0px;}
+	.container-fluid > .content { margin-left: 0px; }
+	.hero-unit { display: none; }
+
+}

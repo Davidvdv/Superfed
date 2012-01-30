@@ -1,0 +1,47 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+h1 {
+	color: #FF4800;
+	font-family: 'Montez',cursive;
+	font-weight:normal;
+	margin: 1%;
+}
+
+dl.tabs > dd > a {
+	color: #FF4800;
+}
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+#top {
+	background-color: #E4CDAC;
+    border-bottom: 1% solid #EEE5E0;
+    margin-bottom: 2%;
+}
+
+/** Custom style zodat de twitter feed niet tegen de volgende row aanstaat **/
+#twtr-widget-1 {
+	margin-bottom: 3%;
+}
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

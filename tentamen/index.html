@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
+	<title>Tentamen Superfed</title>
+	<meta name="author" content="David van de Vondervoort" />
+	
+	<link href="http://fonts.googleapis.com/css?family=Allerta" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/Slide.js"></script>
+	<script type="text/javascript" src="js/SubSlide.js"></script>
+	<script type="text/javascript" src="js/Presentation.js"></script>
+
+	<script type="text/javascript">
+	/* Presentatie object maken en presentatie vullen met slides */
+	var presentation = new Presentation('Superfed');
+	presentation.addSlide(new Slide(0, 'Superfed-te slide', '<p>Hoi. Superfed is een initiatief om cocreatief inhoud van colleges te bepalen rondom frontend development. Cocreatief houdt in dat we samen met jou graag de inhoud willen bepalen. We hopen dat je graag mee wilt doen!</p>'));
+
+	presentation.addSlide( new Slide(1, 'Nog een slide erbij', '<p>Hier is nog een slide. <strong>Html-tags werken ook, want dit staat dikgedrukt.</strong></p>'));
+	
+	function loadContent(){
+		$('#slide header h1').html( presentation.getSlide().getName() );
+		$('#slide article').html( presentation.getSlide().getContent() );
+
+		/* Controle op welke buttons er worden weergegeven */
+		if(presentation.getCurrentParentId() <= 0)
+		{
+			$('#btnPrev').attr("disabled", "disabled");
+		}
+		else if(presentation.getCurrentParentId() >= presentation.amountOfSlides())
+		{
+			$('#btnNext').attr("disabled", "disabled");
+			$('#btnPrev').removeAttr("disabled");
+		}
+	}
+
+	$(document).ready(function(){
+
+		loadContent();
+
+		/* Button clicks */
+		$('#btnNext').click(function(){
+			/* Ga naar de volgende slide */
+			presentation.nextSlide();
+			loadContent();
+		});
+	});
+	</script>
+
+</head>
+
+<body>
+	
+	<div id="presentation">
+
+		<div id="slide">
+
+			<section class="clearfix">
+				<header>
+					<h1>Titel</h1>
+				</header>
+
+				<img id="imgSlide" src="img/placeholder.png" alt="" />
+
+				<article>
+					<p>Presentation is the practice of showing and explaining the content of a topic to an audience or learner. Presentations come in nearly as many forms as there are life situations. In the business world, there are sales presentations, informational and motivational presentations, first encounters, interviews, briefings, status reports, image-building, and of course, the inevitable training sessions.</p>
+				</article>
+
+			</section>
+
+			<nav>
+				<button type="button" id="btnPrev">Prev</button>
+				<button type="button" id="btnDown">Down</button> 
+				<button type="button" id="btnUp">Up</button> 
+				<button type="button" id="btnNext">Next</button> 
+			</nav>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

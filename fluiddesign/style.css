@@ -1,0 +1,214 @@
+/** 
+
+  Begin regulieren CSS
+
+**/
+
+body {
+  margin: 20px;
+  padding: 0;
+  font-family: 'Droid Sans', sans-serif;
+  line-height: 150%;
+}
+ 
+h1 {
+  line-height: 100%;
+}
+
+#forkMeOnGitHub {
+  position: absolute; 
+  top: 0px; 
+  right: 0px; 
+  border: 0px;
+}
+ 
+#pageBody {
+  max-width: 1200px;
+}
+ 
+#header, #nav, #footer, h1, h2, h3 {
+  font-family: "Trebuchet MS", Georgia, sans-serif;
+}
+ 
+#header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+ 
+#header .inner {
+  margin: 0 0 20px 0;
+  padding: 20px;
+  color: #fff;
+  background: #F38630; 
+}
+ 
+#header a {
+  display: block;
+  float: right;
+  color: #fff;
+  font-weight: normal;
+  font-size: 80%;
+}
+ 
+#content {
+  float: left;
+  width: 65%;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+ 
+#content .inner {
+  margin-right: 20px;
+  padding: 20px;
+  color: #333;
+  background: #E0E4CC;
+}
+ 
+#sidebar {
+  float: right;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+ 
+#sidebar .inner {
+  margin-right: 20px;
+  padding: 20px;
+  color: #fff;
+  background: #69D2E7;
+  font-size: 85%;
+}
+ 
+#nav {
+  float: right;
+  width: 15%;
+  margin: 0;
+  padding: 0;
+}
+ 
+#nav ul {
+  margin: 0;
+  padding: 20px;
+  list-style: none;
+  color: #333;
+  background: #A7DBD8;
+  overflow: hidden; 
+}
+ 
+#nav li {
+  border-bottom: 1px solid rgba(255,255,255,.5);
+}
+ 
+#nav li:last-child {
+  border-bottom: none;
+}
+ 
+#nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0 10px 10px;
+  font-weight: bold;
+}
+ 
+#nav a:hover {
+  background: #bce5e3;
+}
+ 
+#footer {
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #FA6900; 
+}
+ 
+#footer .inner {
+  padding: 5px 20px;
+}
+
+/** Responsive gedeelte **/
+
+/** Als het scherm niet groter is dan 1000px **/
+@media screen and (max-width: 1000px) {
+  
+  #content {
+    width: 75%;
+  }
+  
+  #nav, #sidebar {
+    width: 25%;
+  }
+  
+  #sidebar .inner {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+ 
+}
+
+/** Als het scherm niet groter is dan 700px **/
+@media screen and (max-width: 700px) {
+  
+  #content {
+    width: 100%;
+  }
+  
+  #content .inner {
+    margin-right: 0;
+  }
+  
+  #nav {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #nav li {
+    float: left;
+    width: 24%;
+    border-bottom: none;
+    border-right: 1px solid rgba(255,255,255,.5);
+  }
+ 
+  #nav li:last-child {
+    width: 27%;
+    border-right: none;
+  }
+ 
+  #nav a {
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  #sidebar {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin: 20px 0;
+  }
+ 
+}
+
+@media screen and (max-width: 480px) {
+
+      body {
+        margin: 0;
+      }
+
+      #header .inner {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      
+      #header .inner, #content, #nav, #sidebar {
+        margin-bottom: 5px;
+      }
+
+      #nav ul {
+        padding: 5px 7px;
+      }
+
+}
